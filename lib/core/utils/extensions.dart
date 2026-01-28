@@ -44,3 +44,8 @@ extension StringExtensions on String {
     return RegExp(r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$').hasMatch(this);
   }
 }
+
+// 判断是否为深色主题
+extension ThemeExtension on BuildContext {
+  bool get isDark => Theme.of(this).brightness == Brightness.dark;
+}

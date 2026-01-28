@@ -20,11 +20,11 @@ class App extends ConsumerWidget {
           seedColor: Color(0xFFF21CC8), // 👈 用粉色，不能用白色
         ),
         scaffoldBackgroundColor: Color(0xFFF8F8F8),
-        bottomNavigationBarTheme: BottomNavigationBarThemeData(
-          backgroundColor: Colors.white, // 浅色模式：白色
-          selectedItemColor: Color(0xFFF21CC8), // 选中颜色
-          unselectedItemColor: Color(0xFF707070),// 未选中颜色
-        ),
+        // bottomNavigationBarTheme: BottomNavigationBarThemeData(
+        //   backgroundColor: Colors.white, // 浅色模式：白色
+        //   selectedItemColor: Color(0xFFF21CC8), // 选中颜色
+        //   unselectedItemColor: Color(0xFF707070), // 未选中颜色
+        // ),
         useMaterial3: true,
       ),
       darkTheme: ThemeData(
@@ -33,12 +33,12 @@ class App extends ConsumerWidget {
           brightness: Brightness.dark,
         ),
         scaffoldBackgroundColor: Color(0xFF151515),
-        bottomNavigationBarTheme: BottomNavigationBarThemeData(
-          backgroundColor: Color(0xFF000000), // 深色模式：黑色
-          selectedItemColor: Color(0xFFF21CC8),
-          unselectedItemColor: Colors.white,
-          elevation: 0,  // 👈 去掉阴影
-        ),
+        // bottomNavigationBarTheme: BottomNavigationBarThemeData(
+        //   backgroundColor: Color(0xFF000000), // 深色模式：黑色
+        //   selectedItemColor: Color(0xFFF21CC8),
+        //   unselectedItemColor: Colors.white,
+        //   elevation: 0, // 👈 去掉阴影
+        // ),
         useMaterial3: true,
       ),
       themeMode: ThemeMode.dark, // light浅色 / dark深色 / system系统（默认）

@@ -30,11 +30,15 @@ class MainPage extends ConsumerWidget {
 
   // 自定义底部导航栏
   Widget _buildCustomBottomBar(
-      BuildContext context, int currentIndex, WidgetRef ref) {
+    BuildContext context,
+    int currentIndex,
+    WidgetRef ref,
+  ) {
     final isDark = Theme.of(context).brightness == Brightness.dark;
+    final bottomPadding = MediaQuery.of(context).padding.bottom; // 获取底部安全区域
 
     return Container(
-      height: 60,
+      height: 50 + bottomPadding,
       decoration: BoxDecoration(
         color: isDark ? const Color(0xFF151515) : Colors.white,
         borderRadius: const BorderRadius.only(
