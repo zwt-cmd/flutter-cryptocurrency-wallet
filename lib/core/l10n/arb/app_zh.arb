@@ -1,7 +1,12 @@
 {
   "@@locale": "zh",
-  "appTitle": "Flutter 应用",
-  "home": "首页",
-  "settings": "设置",
-  "welcome": "欢迎"
+  "appTitle": "TRADIX",
+  "@appTitle": {
+    "description": "综合金融交易平台"
+  },
+  "tabIndex": "指数",
+  "tabShares": "股票",
+  "tabCurrencies": "货币",
+  "tabFutures": "期货",
+  "tabCrypto": "加密货币"
 }

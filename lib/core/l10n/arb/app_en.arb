@@ -1,19 +1,12 @@
 {
   "@@locale": "en",
-  "appTitle": "Flutter App",
+  "appTitle": "TRADIX",
   "@appTitle": {
-    "description": "The title of the application"
+    "description": "A comprehensive financial trading platform"
   },
-  "home": "Home",
-  "@home": {
-    "description": "Home page title"
-  },
-  "settings": "Settings",
-  "@settings": {
-    "description": "Settings page title"
-  },
-  "welcome": "Welcome",
-  "@welcome": {
-    "description": "Welcome message"
-  }
+  "tabIndex": "INDEX",
+  "tabShares": "SHARES",
+  "tabCurrencies": "CURRENCIES",
+  "tabFutures": "FUTURES",
+  "tabCrypto": "CRYPTO"
 }
