@@ -41,15 +41,15 @@ class App extends ConsumerWidget {
         // ),
         useMaterial3: true,
       ),
-      themeMode: ThemeMode.light, // light浅色 / dark深色 / system系统（默认）
+      themeMode: ThemeMode.dark, // light 浅色 / dark 深色 / system 系统（默认）
       localizationsDelegates: const [
         AppLocalizations.delegate,
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
       ],
-      locale: const Locale('en'), // zh中文 / en 英文 / null（系统）
-      
+      locale: const Locale('en'), // zh 中文 / en 英文 / null（系统）
+
       supportedLocales: AppLocalizations.supportedLocales,
       routerConfig: router,
       debugShowCheckedModeBanner: false,

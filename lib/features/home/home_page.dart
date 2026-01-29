@@ -39,84 +39,97 @@ class HomePage extends ConsumerWidget {
 
           // TabBarView - 你自己写列表内容
           Expanded(
-            child: TabBarView(
-              children: dataList.map((items) {
-                return ListView.builder(
-                  padding: EdgeInsets.only(top: 20),
-                  itemCount: items.length,
-                  itemBuilder: (context, index) {
-                    final item = items[index];
-                    return Column(
-                      children: [
-                        Container(
-                          padding: EdgeInsets.all(16),
-                          color: context.isDark
-                              ? Color(0xFF151515)
-                              : Colors.white,
-                          child: Row(
-                            children: [
-                              // 左边
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    item.name,
-                                    style: TextStyle(fontSize: 18),
-                                  ),
-                                  Text(
-                                    '${item.time}  ${item.exchange}',
-                                    style: TextStyle(color: Colors.grey),
-                                  ),
-                                ],
-                              ),
-                              Spacer(), // 占余空间
-                              // 右边
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.end,
-                                children: [
-                                  Container(
-                                    padding: EdgeInsets.symmetric(
-                                      horizontal: 12,
-                                      vertical: 6,
+            child: ClipRRect(
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(10),
+                topRight: Radius.circular(10),
+              ),
+              child: TabBarView(
+                children: dataList.map((items) {
+                  return ListView.builder(
+                    padding: EdgeInsets.only(top: 20),
+                    itemCount: items.length,
+                    itemBuilder: (context, index) {
+                      final item = items[index];
+                      return Column(
+                        children: [
+                          Container(
+                            padding: EdgeInsets.fromLTRB(16, 16, 16, 12),
+                            color: context.isDark
+                                ? Color(0xFF151515)
+                                : Colors.white,
+                            child: Row(
+                              children: [
+                                // 左边
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      item.name,
+                                      style: TextStyle(fontSize: 18),
                                     ),
-                                    decoration: BoxDecoration(
-                                      color: Color(0xFF00D9A5),
-                                      borderRadius: BorderRadius.circular(50),
+                                    SizedBox(height: 3),
+                                    Text(
+                                      '${item.time}  ${item.exchange}',
+                                      style: TextStyle(color: Colors.grey),
                                     ),
-                                    child: Text(
-                                      item.price.toString(),
-                                      style: TextStyle(
-                                        color: Colors.black38,
-                                        fontWeight: FontWeight.bold,
+                                  ],
+                                ),
+                                Spacer(), // 占余空间
+                                // 右边
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.end,
+                                  children: [
+                                    Container(
+                                      width: 80,
+                                      padding: EdgeInsets.symmetric(
+                                        horizontal: 12,
+                                        vertical: 6,
+                                      ),
+                                      decoration: BoxDecoration(
+                                        color: Color(0xFF0CF2B4),
+                                        borderRadius: BorderRadius.circular(50),
+                                      ),
+                                      child: FittedBox(
+                                        fit: BoxFit.scaleDown, // 自动调整字体大小
+                                        child: Text(
+                                          item.price.toString(),
+                                          style: TextStyle(
+                                            color: Colors.black38,
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 20, // 最大字号
+                                          ),
+                                        ),
                                       ),
                                     ),
-                                  ),
-                                  Text(
-                                    '+203 (+1.04%)',
-                                    style: TextStyle(
-                                      color: context.isDark
-                                          ? Colors.white
-                                          : Color(0xFF151515),
+                                    SizedBox(height: 3),
+                                    Text(
+                                      '+203 (+1.04%)',
+                                      style: TextStyle(
+                                        color: context.isDark
+                                            ? Colors.white
+                                            : Color(0xFF151515),
+                                      ),
                                     ),
-                                  ),
-                                ],
-                              ),
-                            ],
+                                  ],
+                                ),
+                              ],
+                            ),
                           ),
-                        ),
-                        // item边框
-                        Divider(
-                          height: 1,
-                          thickness: 0.5,
-                          indent: 16,
-                          endIndent: 16,
-                          color: Color(0xFFE0E0E0),
-                        ),
-                      ],
-                    );
-                  },
-                );
-              }).toList(),
+                          // item边框
+                          Divider(
+                            height: 1,
+                            thickness: context.isDark ? 0.1 : 0.5,
+                            indent: 16,
+                            endIndent: 16,
+                            color: Color(0xFFE0E0E0),
+                          ),
+                        ],
+                      );
+                    },
+                  );
+                }).toList(),
+              ),
             ),
           ),
         ],
@@ -179,7 +192,7 @@ class HomePage extends ConsumerWidget {
   Widget _buildTabBar(BuildContext context, List<String> tabs) {
     return Container(
       decoration: BoxDecoration(
-        color: context.isDark ? Colors.black : Color(0xFFF8F8F8),
+        color: context.isDark ? Color(0xFF151515) : Color(0xFFF8F8F8),
         borderRadius: BorderRadius.only(topLeft: Radius.circular(20)),
       ),
       padding: EdgeInsets.fromLTRB(16, 16, 16, 0),
@@ -194,7 +207,7 @@ class HomePage extends ConsumerWidget {
         indicatorSize: TabBarIndicatorSize.tab,
         indicator: BoxDecoration(
           gradient: const LinearGradient(
-            colors: [Color(0xFFF21CC8), Color(0xFFFD9FEB)],
+            colors: [Color(0xFFF21CC8), Color(0xFFF21CC8)],
           ),
           borderRadius: BorderRadius.circular(20),
         ),

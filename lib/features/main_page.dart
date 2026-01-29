@@ -40,7 +40,7 @@ class MainPage extends ConsumerWidget {
     return Container(
       height: 50 + bottomPadding,
       decoration: BoxDecoration(
-        color: isDark ? const Color(0xFF151515) : Colors.white,
+        color: isDark ? const Color(0xFF000000) : Colors.white,
         borderRadius: const BorderRadius.only(
           topLeft: Radius.circular(20),
           topRight: Radius.circular(20),
