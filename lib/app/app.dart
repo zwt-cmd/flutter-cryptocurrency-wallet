@@ -41,7 +41,7 @@ class App extends ConsumerWidget {
         // ),
         useMaterial3: true,
       ),
-      themeMode: ThemeMode.dark, // light 浅色 / dark 深色 / system 系统（默认）
+      themeMode: ThemeMode.light, // light 浅色 / dark 深色 / system 系统（默认）
       localizationsDelegates: const [
         AppLocalizations.delegate,
         GlobalMaterialLocalizations.delegate,
