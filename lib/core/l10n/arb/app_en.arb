@@ -8,5 +8,17 @@
   "tabShares": "SHARES",
   "tabCurrencies": "CURRENCIES",
   "tabFutures": "FUTURES",
-  "tabCrypto": "CRYPTO"
+  "tabCrypto": "CRYPTO",
+  "artTabEditorial": "EDITORIAL",
+  "artCryptoNews": "CRYPTO NEWS",
+  "artRawMaterial": "RAW MATERUAL",
+  "artEconomics": "ECONOMICS",
+  "mineAlert": "Alert",
+  "minePerdictions":"perdictions",
+  "mineSavedElement":"Saved Element",
+  "mineRemove":"Remove Ads",
+  "mineSelectStocks":"Select Stockt",
+  "mineCurrencyEXchange":"Currency EXchange",
+  "mineWebinar":"webinar",
+  "mineBestBroker":"Best Broker"
 }

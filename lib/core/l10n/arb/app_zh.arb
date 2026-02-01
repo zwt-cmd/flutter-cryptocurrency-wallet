@@ -8,5 +8,17 @@
   "tabShares": "股票",
   "tabCurrencies": "货币",
   "tabFutures": "期货",
-  "tabCrypto": "加密货币"
+  "tabCrypto": "加密货币",
+  "artTabEditorial": "社论",
+  "artCryptoNews": "加密货币 新闻",
+  "artRawMaterial": "原料",
+  "artEconomics": "经济学",
+  "mineAlert": "提醒",
+  "minePerdictions": "预测",
+  "mineSavedElement": "已保存元素",
+  "mineRemove": "移除广告",
+  "mineSelectStocks": "选择股票",
+  "mineCurrencyEXchange": "货币兑换",
+  "mineWebinar": "网络研讨会",
+  "mineBestBroker": "最佳经纪人"
 }
